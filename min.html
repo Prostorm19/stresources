@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function findMin() {
+            var nums = [];
+            nums.push(parseInt(document.myform.n1.value));
+            nums.push(parseInt(document.myform.n2.value));
+            nums.push(parseInt(document.myform.n3.value));
+            nums.push(parseInt(document.myform.n4.value));
+            nums.push(parseInt(document.myform.n5.value));
+            var min = nums[0];
+            for (var i = 1; i < nums.length; i++) {
+                if (nums[i] < min) {
+                    min = nums[i];
+                }
+            }
+            document.myform.result.value = min;
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>---Program to find the minimum of five numbers---</h1>
+        <hr color="red">
+        <form name="myform">
+            Enter Number 1: <input type="text" name="n1" value=""> <br> <br>
+            Enter Number 2: <input type="text" name="n2" value=""> <br> <br>
+            Enter Number 3: <input type="text" name="n3" value=""> <br> <br>
+            Enter Number 4: <input type="text" name="n4" value=""> <br> <br>
+            Enter Number 5: <input type="text" name="n5" value=""> <br> <br>
+            <input type="button" name="btn" value="Find Min" onClick="findMin()"><br><br>
+            Minimum: <input type="text" name="result" value="">
+        </form>
+    </center>
+</body>
+
+</html>
